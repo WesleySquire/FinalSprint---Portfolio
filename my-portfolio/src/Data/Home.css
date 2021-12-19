@@ -1,0 +1,129 @@
+/* slideshow thingy */
+
+.text {
+  color: #222;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 70%;
+  padding: 20px;
+  background: #fff;
+  opacity: 0;
+  transition: 0.5s;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 20px;
+}
+
+.slideContainer .clip:hover .text,
+.slideContainer .clipv3:hover .text {
+  bottom: 0;
+  opacity: 1;
+}
+
+.slideContainer {
+  position: relative;
+  width: 1005px;
+  height: 492px;
+  background: #222;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .slideContainer {
+    width: 100vw;
+    height: 28vh;
+  }
+}
+
+.slideContainer .clip,
+.slideContainer .clipv3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.slideContainer .clip.clip1 {
+  background: url(./Images/WATCCode.png);
+  background-size: cover;
+  clip-path: polygon(33% 0, 0 0, 0 100%, 8% 100%);
+}
+
+.slideContainer .clip.clip2 {
+  background: url(./Images/WATC.png);
+  background-size: cover;
+  clip-path: polygon(100% 0, 33% 0, 8% 100%, 100% 100%);
+
+  /* clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%); */
+}
+
+.slideContainer .clipv3.clip3 {
+  background: url(./Images/Pokedex2.png);
+  background-size: cover;
+  clip-path: polygon(0 0, 55% 0, 20% 100%, 0% 100%);
+
+  /* clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%); */
+}
+.slideContainer .clipv3.clip4 {
+  background: url(./Images/Pokedex.png);
+  background-size: cover;
+  clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%);
+
+  /* clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%); */
+}
+.slideContainer .clipv3.clip5 {
+  background: url(./Images/Pokedex3.png);
+  background-size: cover;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 45% 100%);
+
+  /* clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%); */
+}
+
+.slideContainer:hover .clip,
+.slideContainer:hover .clipv3 {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.slideContainer .clip:hover {
+  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}
+
+.slideContainer .clipv3:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
